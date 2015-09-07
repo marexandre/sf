@@ -1,0 +1,13 @@
+{
+  "disallowMultipleVarDecl": true,
+  "disallowSpacesInsideObjectBrackets": true,
+  "requireCurlyBraces": [ "if", "else", "for", "while", "do", "try", "catch" ],
+  "requireSpaceAfterKeywords": [ "if", "else", "for", "while", "do", "switch", "return", "try", "catch" ],
+  "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
+  "disallowKeywords": ["with"],
+  "requireLineFeedAtFileEnd": true,
+  "requireParenthesesAroundIIFE": true,
+  "disallowEmptyBlocks": true,
+  "requireCommaBeforeLineBreak": true,
+  "disallowMultipleLineStrings": true
+}

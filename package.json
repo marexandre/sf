@@ -1,0 +1,28 @@
+{
+  "name": "strava-forum-challenge",
+  "version": "0.0.1",
+  "description": "An Strava Forum challenge",
+  "homepage": "https://github.com/marexandre/sf",
+  "author": "Alexandre Kirillov <alexandre.kirillov@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marexandre/sf.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "express-handlebars": "~2.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-sass": "^2.0.4",
+    "jshint-stylish": "^2.0.1",
+    "nodemon": "~1.4.1"
+  }
+}
