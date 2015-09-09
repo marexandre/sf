@@ -5,18 +5,26 @@ var nodemon = require('gulp-nodemon');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   js: ['./server.js', './app/**/*.js', './api/**/*.js'],
   sass: ['./sass/**/*.scss'],
+  css: './public/css'
 };
 
 
 // CSS
 gulp.task('sass', function() {
-  gulp.src(paths.sass)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./public/css'));
+  gulp
+    .src(paths.sass)
+      .pipe(sass().on('error', sass.logError))
+      .pipe(sass({outputStyle: 'expanded'}))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
+      .pipe(gulp.dest(paths.css));
 });
 
 
@@ -38,12 +46,15 @@ gulp.task('nodemon', function() {
 });
 
 
-gulp.task('watch', function() {
+// Watch tasks
+gulp.task('js-watch', function() {
   gulp.watch(paths.js, ['lint']);
+});
+
+gulp.task('sass-watch', function() {
   gulp.watch(paths.sass, ['sass']);
 });
 
 
-// Tasks
-gulp.task('dev', ['nodemon', 'watch']);
-gulp.task('default', ['lint', 'scss-lint']);
+gulp.task('dev', ['nodemon', 'js-watch', 'sass-watch']);
+gulp.task('default', ['lint', 'sass']);
