@@ -1,7 +1,10 @@
 @import 'variables';
 @import 'strava';
+@import 'nav';
 @import 'header';
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: $font-size-base;
+  color: $base-text-color;
 }

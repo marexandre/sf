@@ -1,0 +1,26 @@
+.nav-tabs > li {
+  &.active {
+    border-top: 2px solid $brand-color !important;
+    > a {
+      color: $base-text-color;
+      border-top: 0;
+      border-radius: 0;
+      &:hover {
+        color: $base-text-color;
+        cursor: pointer;
+        border-top: 0;
+      }
+    }
+  }
+  a {
+    font-size: $font-size-small;
+    padding: 10px 20px 9px;
+    margin-right: 0;
+    color: $base-text-color;
+    &:hover {
+      background-color: #f5f5f5;
+      border-color: #f5f5f5;
+      border-radius: 0;
+    }
+  }
+}
