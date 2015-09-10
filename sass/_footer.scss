@@ -1,0 +1,130 @@
+// Promotion
+.footer-promos {
+  margin-top: 80px;
+  font-size: 12px;
+  background-color: #f5f5f5;
+
+  .row {
+    padding: 20px;
+    @media (min-width: $screen-sm) {
+      padding: 40px 0;
+    }
+  }
+
+  a {
+    color: #666;
+
+    &:hover {
+      color: $link-hover;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin: .4em 0 1em 0;
+  }
+
+  strong {
+    font-weight: 400;
+    color: $brand-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .shop a:hover {
+    color: #666;
+    text-decoration: none;
+  }
+
+  .promo {
+    min-height: auto;
+    padding: 12px 0;
+    @media (min-width: $screen-sm) {
+      min-height: 160px;
+      padding: 0 20px;
+    }
+
+    & + .promo {
+      border-top: 1px solid #ccc;
+      border-left: 0;
+      @media (min-width: $screen-sm) {
+        border-top: 0;
+        border-left: 1px solid #ccc;
+      }
+    }
+  }
+
+  .promo-image {
+    margin-left: 40px;
+  }
+
+  .recent-activities li {
+    padding-left: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    .icon {
+      float: left;
+      margin-left: -24px;
+    }
+  }
+}
+
+footer {
+  font-size: 12px;
+  padding: 40px 0;
+
+  h4 {
+    color: #666;
+    font-weight: 400;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  a {
+    color: #999;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .strava-logo {
+    width: 125px;
+    height: 27px;
+    background-position: 0 -54px;
+  }
+
+  .copyright {
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .newsletter {
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    margin: 30px 0;
+
+    a {
+      color: #666;
+    }
+
+    p {
+      color: #666;
+      font-size: 12px;
+      margin-left: 40px;
+    }
+
+    .email {
+      background-position: -60px 0px;
+      width: 26px;
+      height: 19px;
+    }
+  }
+
+}

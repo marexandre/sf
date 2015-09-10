@@ -9,19 +9,15 @@
   border: 0;
   border-bottom: 1px solid #e5e5e5;
   border-radius: 0;
+
   .navbar-brand {
     height: $navbar-height;
     padding-left: 20px;
   }
+
   .strava-logo {
-    display: inline-block;
     width: 114px;
     height: 24px;
-    overflow: hidden;
-    text-indent: -999em;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 100%;
   }
 }
 
@@ -33,21 +29,26 @@
   > li > a {
     padding: 17px 1em;
     color: #666;
+
     &:hover {
       color: $brand-color;
       background-color: transparent;
     }
+
     i:hover {
       cursor: pointer;
     }
   }
+
   .active > a {
     font-weight: 500;
     color: #333;
   }
+
   .notification-wrap {
     @include vertical-align(18px);
   }
+
   .notifications-icon {
     display: inline-block;
     width: 18px;
@@ -60,30 +61,37 @@
     opacity: .5;
     transition: opacity .2s ease;
   }
+
   a:hover > .notifications-icon {
     opacity: 1;
   }
+
   .avatar-wrap {
     @include vertical-align(30px);
   }
+
   .avatar {
     width: 30px;
     height: 30px;
+
     img {
       width: 100%;
       height: auto;
       border-radius: 50%;
     }
   }
+
   .icon-upload-wrap {
     padding-right: 10px;
     padding-left: 10px;
 
     @include vertical-align(22px);
+
     &:hover .icon-upload {
       background-position: 0 33.333%;
     }
   }
+
   .icon-upload {
     display: inline-block;
     width: 24px;
