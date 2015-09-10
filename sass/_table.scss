@@ -1,0 +1,105 @@
+.forum-table {
+  margin: 20px 0;
+
+  a {
+    color: $base-text-color;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+
+
+  > thead, > tbody, > tfoot {
+    tr > th,
+    tr > td {
+      padding: 9px 20px;
+      font-size: $font-size-small;
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+
+  > tbody > tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, .02);
+  }
+
+  > tbody > tr > td {
+    border: 0;
+    text-align: center;
+
+    &:first-child,
+    &:last-child {
+      text-align: left;
+    }
+  }
+
+
+  thead {
+    background-color: #f5f5f5;
+
+    > tr > th {
+      font-weight: $font-weight-bold;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .title {
+    display: table;
+
+    a {
+      font-size: $font-size-base;
+    }
+
+    .title-link,
+    .title-icon {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .icon-cycling,
+  .icon-running {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    width: 36px;
+    height: 36px;
+    margin-right: 18px;
+  }
+
+  .icon-cycling {
+    background-image: url('/svg/cycling.svg');
+  }
+  .icon-running {
+    background-image: url('/svg/running.svg');
+  }
+
+  .last-updated {
+    display: table;
+
+    .meta,
+    .avatar {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .avatar img {
+      border-radius: 36px;
+      margin-right: 12px;
+    }
+
+    .meta {
+      a,
+      p {
+        font-size: 12px;
+        padding: 0;
+      }
+
+      p {
+        color: #a9a9a9;
+      }
+    }
+  }
+}
