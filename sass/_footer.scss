@@ -80,6 +80,7 @@ footer {
   h4 {
     color: #666;
     font-weight: 400;
+    margin: 0 0 20px 0;
   }
 
   li {
@@ -90,6 +91,7 @@ footer {
     color: #999;
 
     &:hover {
+      color: #666;
       text-decoration: none;
     }
   }
