@@ -5,3 +5,27 @@
   border: 1px solid #ccc;
 }
 
+.btn-kudo {
+  padding: 2px;
+
+  &:hover {
+    cursor: pointer;
+
+    .icon-kudo {
+      opacity: 1;
+    }
+  }
+
+  .count,
+  .icon-kudo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .icon-kudo {
+    position: relative;
+    top: -2px;
+    margin-right: 2px;
+    opacity: .5;
+  }
+}
