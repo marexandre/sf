@@ -8,6 +8,18 @@ var exphbs  = require('express-handlebars');
 var API     = require('./api/api');
 var APP     = require('./app/app');
 
+var numeral = require('numeral');
+var hbs = exphbs.create({
+  defaultLayout: 'layout',
+  // Specify helpers which are only registered on this instance.
+  helpers: {
+    number: function() {
+      [].unshift.call(arguments, 'number');
+      return numeral(arguments[1]).format('0,0');
+    }
+  }
+});
+
 /**
  * API
  */
@@ -20,7 +32,7 @@ var api = express()
 var app = express()
   .use('/api', api)
   .use(express.static(__dirname + '/public'))
-  .engine('handlebars', exphbs({defaultLayout: 'layout'}))
+  .engine('handlebars', hbs.engine)
   .set('view engine', 'handlebars');
 
 app
