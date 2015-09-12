@@ -9,13 +9,18 @@ var API     = require('./api/api');
 var APP     = require('./app/app');
 
 var numeral = require('numeral');
-var hbs = exphbs.create({
+var hbs = exphbs({
   defaultLayout: 'layout',
   // Specify helpers which are only registered on this instance.
   helpers: {
-    number: function() {
-      [].unshift.call(arguments, 'number');
-      return numeral(arguments[1]).format('0,0');
+    number: function(num) {
+      return numeral(num).format('0,0');
+    },
+    breaklines: function(str) {
+      return str
+        .replace(/\r\n/g, '\n')
+        .replace(/\r/g, '\n')
+        .replace(/\n/g, '<br/>');
     }
   }
 });
@@ -32,12 +37,13 @@ var api = express()
 var app = express()
   .use('/api', api)
   .use(express.static(__dirname + '/public'))
-  .engine('handlebars', hbs.engine)
+  .engine('handlebars', hbs)
   .set('view engine', 'handlebars');
 
 app
   .get('/', APP.index)
-  .get('/category/:forum_id', APP.category);
+  .get('/category/:forum_id', APP.category)
+  .get('/post/:post_id', APP.post);
 
 
 var port = process.env.PORT || 8999;
