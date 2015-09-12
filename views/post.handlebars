@@ -1,45 +1,69 @@
 <div class="col-md-12">
   <div class="forum-head clearfix">
     <h1 class="pull-left"><a href="/">Forum</a>{{#if title}} - {{title}}{{/if}}</h1>
-    <a href="/post/create" class="btn btn-strava btn-create-post pull-right">Create a Post</a>
+    <a href="/post/create" class="btn btn-strava btn-create-post pull-right hidden-xs">Create a Post</a>
   </div>
 
-  <hgroup class="post-title">
-    <h2>{{post.title}}</h2>
-    <ul class="list-inline list-post-meta">
-      <li>{{post.messages}} Messages</li>
-      <li class="divider"></li>
-      <li>{{post.views}} Views</li>
-      <li class="divider"></li>
-      <li>{{post.kudos}} Kudos</li>
-    </ul>
-  </hgroup>
+  <div class="row">
+    <hgroup class="post-title col-md-12">
+      <h2>{{post.title}}</h2>
+      <ul class="list-inline list-post-meta">
+        <li>{{number post.meta.messages}} Messages</li>
+        <li class="divider"></li>
+        <li>{{number post.meta.views}} Views</li>
+        <li class="divider"></li>
+        <li>{{number post.meta.kudos}} Kudos</li>
+      </ul>
+    </hgroup>
 
-  <div class="post">
-    <div class="post-meta">
-      <img src="{{post.user.image}}" />
-      <p>{{post.user.kudos}}</p>
-    </div>
+    <div class="col-md-9">
 
-    <div class="post-body">
-      <p class="post-date">
-        <a href="#{{post.user.id}}">{{post.user.name}}</a>, {{post.date}}
-      </p>
+      <div class="post">
+        <div class="post-meta">
+          <img src="{{post.user.image}}" />
+          <p>{{number post.user.kudos}}</p>
+        </div>
 
-      <div class="post-message">
-        {{{breaklines post.body}}}
-      </div>
+        <div class="post-body">
+          <p class="post-date">
+            <a href="#{{post.user.id}}">{{post.user.name}}</a>, {{post.date}}
+          </p>
 
-      <div class="post-attachments"></div>
+          <div class="post-message">
+            {{{breaklines post.body}}}
+          </div>
 
-      <div class="post-footer">
-        <div class="btn-kudo">
-          <i class="icon-kudo icon-dark"></i>
-          <span class="count">0</span>
+          <div class="post-attachments"></div>
+
+          <div class="post-footer">
+            <div class="btn-kudo">
+              <i class="icon-kudo icon-dark"></i>
+              <span class="count">{{number post.kudos}}</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="comment">
+        <h2>Comment</h2>
+        <div class="comment-wrap">
+          <div class="comment-user">
+            <img src="https://dgalywyr863hv.cloudfront.net/pictures/athletes/7417/4259/2/medium.jpg">
+          </div>
+          <div class="comment-form">
+            <form>
+              <textarea class="form-control"></textarea>
+              <button type="submit" class="btn btn-default btn-strava">Add Comment</button>
+              <button type="cancel" class="btn btn-link">Cancel</button>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+
+
     </div>
 
   </div>
-
 </div>

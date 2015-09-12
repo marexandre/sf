@@ -12,11 +12,11 @@ exports.index = function(req, res) {
 
 // GET /category/:forum_id
 exports.category = function(req, res) {
+  var forumID = parseInt(req.params.forum_id, 10);
   var title = '';
-  // var imax = Math.round(Math.random() * 16) + 1;
   var imax = 10;
 
-  switch (parseInt(req.params.forum_id, 10)) {
+  switch (forumID) {
     case 1:
       title = 'Forum Rules';
       imax = 10;
@@ -63,5 +63,17 @@ exports.category = function(req, res) {
   res.render('category', {
     title: title,
     data: tmpList
+  });
+};
+
+// GET /post/:post_id
+exports.post = function(req, res) {
+  var postID = parseInt(req.params.post_id, 10);
+
+  postID = 1;
+  var post = require(appRoot + '/data/post_'+ postID +'.json');
+
+  res.render('post', {
+    post: post
   });
 };

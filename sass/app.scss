@@ -19,24 +19,23 @@ a:hover {
   color: $link-hover;
 }
 
+textarea.form-control {
+  margin-bottom: 18px;
+  border-radius: 0;
+
+  &:focus {
+    border-color: $link-hover;
+    box-shadow: none;
+  }
+}
 
 .forum-head {
-  margin: 20px 0 30px;
+  margin: 14px 0 20px;
+  @media (min-width: $screen-xs) {
+    margin: 20px 0 30px;
+  }
 
   h1 {
     margin: 0;
-  }
-
-  .btn-create-post {
-    color: #fff;
-    background-color: $brand-color;
-    border-color: $brand-color;
-    margin-top: 16px;
-    width: 100%;
-
-    @media (min-width: $screen-xs) {
-      width: auto;
-      margin-top: 0;
-    }
   }
 }

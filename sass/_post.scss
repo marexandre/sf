@@ -2,6 +2,10 @@
   margin-bottom: 30px;
   font-weight: $font-weight-thin;
 
+  h2 {
+    margin-top: 0;
+  }
+
   .divider {
     background-color: $text-color-base;
     height: 10px;
@@ -9,11 +13,20 @@
     padding: 0;
     margin: 0 5px;
   }
+
+
+  .list-post-meta {
+    font-size: $font-size-small;
+
+    @media (min-width: $screen-xs) {
+      font-size: $font-size-base;
+    }
+  }
 }
 
 .post {
   display: table;
-  max-width: 680px;
+  margin-bottom: 30px;
 
   > div {
     display: table-cell;
@@ -31,27 +44,36 @@
   }
 
   .post-meta {
-    width: 48px;
-    padding-right: 18px;
+    width: 32px;
+    padding-right: 12px;
 
     img {
-      width: 48px;
-      height: 48px;
-      border-radius: 48px;
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
     }
     p {
       margin: 6px 0 0;
       text-align: center;
+      font-size: 11px;
+    }
+
+    @media (min-width: $screen-xs) {
+      width: 48px;
+      padding-right: 18px;
+
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+      }
     }
   }
 
-  .post-body {
-  }
-
   .post-footer {
-    margin: 18px 0;
+    margin-top: 14px;
     padding-bottom: 6px;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #e5e5e5;
 
     .btn-kudo {
       display: inline-block;
@@ -64,8 +86,50 @@
       .icon-kudo {
         width: 18px;
         height: 18px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.comment {
+  h2 {
+    margin: 0 0 20px;
+  }
+
+  .comment-wrap {
+    display: table;
+    width: 100%;
+
+    > * {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .comment-user {
+    width: 32px;
+    padding-right: 12px;
+    vertical-align: top;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+    }
+    @media (min-width: $screen-xs) {
+      width: 48px;
+      padding-right: 18px;
+
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
       }
     }
   }
 
+  textarea {
+    min-height: 120px;
+  }
 }

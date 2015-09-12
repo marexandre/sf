@@ -1,8 +1,36 @@
+.btn-strava,
+.btn-default,
+.btn-create-post {
+  transition: background 0.1s linear;
+}
+
+.btn-default:hover {
+  background-color: #f5f5f5;
+}
+
 .btn-strava {
   padding: 5px 12px;
   border-radius: 0;
   font-weight: $font-weight-thin;
   border: 1px solid #ccc;
+}
+
+.btn-create-post {
+  color: #fff;
+  background-color: $brand-color;
+  border-color: $brand-color;
+  margin-top: 16px;
+  width: 100%;
+
+  &:hover {
+    color: #fff;
+    background-color: #e34402;
+  }
+
+  @media (min-width: $screen-xs) {
+    width: auto;
+    margin-top: 0;
+  }
 }
 
 .btn-kudo {
