@@ -91,10 +91,38 @@
     "posts": 1318,
     "messages": 3204,
     "update": {
+      "user_id": 2,
+      "user_name": "Minori Kikugawa",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/1294718\/558060\/6\/medium.jpg",
+      "last_updated": "2 days ago"
+    }
+  },
+  {
+    "label": "Gran Fondo 120",
+    "category": "challenge",
+    "forum_id": 8,
+    "athletes": 310,
+    "posts": 16,
+    "messages": 38,
+    "update": {
       "user_id": 1,
       "user_name": "Alex K",
       "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
       "last_updated": "2 months ago"
+    }
+  },
+  {
+    "label": "The Rut Climbing Challenge",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 4,
+    "posts": 3,
+    "messages": 12,
+    "update": {
+      "user_id": 2,
+      "user_name": "Minori Kikugawa",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/1294718\/558060\/6\/medium.jpg",
+      "last_updated": "4 minutes ago"
     }
   }
 ]
