@@ -1,5 +1,8 @@
 'user strict';
 
+var path = require('path');
+global.appRoot = path.resolve(__dirname);
+
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var API     = require('./api/api');
@@ -21,7 +24,8 @@ var app = express()
   .set('view engine', 'handlebars');
 
 app
-  .get('/', APP.index);
+  .get('/', APP.index)
+  .get('/category/:forum_id', APP.category);
 
 
 var port = process.env.PORT || 8999;

@@ -50,6 +50,7 @@
 
   "globals": {
     "define": true,
-    "settings": true
+    "settings": true,
+    "appRoot": true
   }
 }

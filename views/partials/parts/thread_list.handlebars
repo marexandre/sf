@@ -1,0 +1,49 @@
+<div class="thread">
+
+  <ul class="list-unstyled list-thread thead hidden-xs">
+    {{#each data.thead}}
+    <li class="{{type}}">{{label}}</li>
+    {{/each}}
+  </ul>
+
+  <ul class="list-unstyled list-thread">
+    {{#each data.tbody}}
+    <li class="tbody">
+      <div class="main">
+        <div class="thread-meta">
+          <div class="thread-icon">
+            <i class="icon-{{category}}"></i>
+          </div>
+          <div class="thread-title">
+            <a href="category/{{forum_id}}">{{label}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="num">
+        <i class="icon-athletes visible-xs-inline-block"></i>
+        {{athletes}}
+      </div>
+      <div class="num">
+        <i class="icon-posts visible-xs-inline-block"></i>
+        {{posts}}
+      </div>
+      <div class="num">
+        <i class="icon-messages visible-xs-inline-block"></i>
+        {{messages}}
+      </div>
+      <div class="update">
+        <div class="thread-meta">
+          <div class="thread-icon avatar">
+            <img src="{{update.user_image}}" />
+          </div>
+          <div class="thread-title">
+            <a href="#">{{update.user_name}}</a>
+            <p class="date">{{update.last_updated}}</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+
+</div>

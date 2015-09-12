@@ -1,18 +1,12 @@
 <div class="col-md-12">
-  <h1>Forum</h1>
+  <h1><a href="/">Forum</a>{{#if title}} - {{title}}{{/if}}</h1>
 
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#">Active</a></li>
-    <li ><a href="#">Starred</a></li>
-    <li ><a href="#">Archived</a></li>
-  </ul>
-
-  <div class="thread">
+  <div class="thread post-list">
     <ul class="list-unstyled list-thread thead hidden-xs">
-      <li class="main">Category</li>
-      <li class="num">Athletes</li>
-      <li class="num">Posts</li>
+      <li class="main">Discussion</li>
       <li class="num">Messages</li>
+      <li class="num">Views</li>
+      <li class="num">Kudos</li>
       <li class="update">Last Updated</li>
     </ul>
     <ul class="list-unstyled list-thread">
@@ -21,24 +15,27 @@
         <div class="main">
           <div class="thread-meta">
             <div class="thread-icon">
-              <i class="icon-{{category}}"></i>
+              <img src="{{post.user_image}}" />
             </div>
             <div class="thread-title">
-              <a href="category/{{forum_id}}">{{label}}</a>
+              <a href="/post/{{post.id}}">{{post.title}}</a>
+              <p><a href="#{{post.user_id}}">{{post.user_name}}</a>, {{post.date}}</p>
             </div>
           </div>
         </div>
         <div class="num num-xs">
           <i class="icon-athletes visible-xs-inline-block"></i>
-          {{athletes}}
+          {{messages}}
         </div>
         <div class="num">
           <i class="icon-posts visible-xs-inline-block"></i>
-          {{posts}}
+          {{views}}
         </div>
         <div class="num">
-          <i class="icon-messages visible-xs-inline-block"></i>
-          {{messages}}
+          <div class="kudo">
+            <i class="icon-kudo icon-dark"></i>
+            <span class="count">{{kudos}}</span>
+          </div>
         </div>
         <div class="update">
           <div class="thread-meta">
@@ -55,6 +52,5 @@
       {{/each}}
     </ul>
   </div>
-
 
 </div>

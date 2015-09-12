@@ -1,0 +1,35 @@
+.post-list {
+
+  .tbody .kudo {
+    padding: 2px;
+
+    &:hover {
+      cursor: pointer;
+
+      .icon-kudo {
+        opacity: 1;
+      }
+    }
+
+    .count,
+    .icon-kudo {
+      line-height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .icon-kudo {
+      position: relative;
+      top: -2px;
+      width: 18px;
+      height: 18px;
+      margin-right: 2px;
+      opacity: .5;
+
+      @media (min-width: $screen-xs) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

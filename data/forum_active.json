@@ -1,0 +1,100 @@
+[
+  {
+    "label": "Forum Rules",
+    "category": "admin",
+    "forum_id": 1,
+    "athletes": 125,
+    "posts": 2906,
+    "messages": 39936,
+    "update": {
+      "usser_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2 months ago"
+    }
+  },
+  {
+    "label": "Forum Announcements",
+    "category": "admin",
+    "forum_id": 2,
+    "athletes": 203,
+    "posts": 3301,
+    "messages": 22002,
+    "update": {
+      "usser_id": 2,
+      "user_name": "Minori Kikugawa",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/1294718\/558060\/6\/medium.jpg",
+      "last_updated": "11 days ago"
+    }
+  },
+  {
+    "label": "Cycling Racing",
+    "category": "cycling",
+    "forum_id": 3,
+    "athletes": 456,
+    "posts": 2906,
+    "messages": 50936,
+    "update": {
+      "usser_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2 months ago"
+    }
+  },
+  {
+    "label": "Cycling Gear",
+    "category": "cycling",
+    "forum_id": 4,
+    "athletes": 1421,
+    "posts": 1003,
+    "messages": 23072,
+    "update": {
+      "usser_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2 months ago"
+    }
+  },
+  {
+    "label": "Running Racing",
+    "category": "running",
+    "forum_id": 5,
+    "athletes": 1127,
+    "posts": 1056,
+    "messages": 3606,
+    "update": {
+      "usser_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2 months ago"
+    }
+  },
+  {
+    "label": "Running Gear",
+    "category": "running",
+    "forum_id": 6,
+    "athletes": 959,
+    "posts": 1318,
+    "messages": 9896,
+    "update": {
+      "usser_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2 months ago"
+    }
+  },
+  {
+    "label": "Strava Climbing Challenge",
+    "category": "challenge",
+    "forum_id": 7,
+    "athletes": 839,
+    "posts": 1318,
+    "messages": 3204,
+    "update": {
+      "usser_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2 months ago"
+    }
+  }
+]

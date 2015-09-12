@@ -34,14 +34,22 @@
       display: table-cell;
       vertical-align: middle;
     }
+
+    .thread-icon {
+      vertical-align: top;
+
+      @media (min-width: $screen-sm) {
+        vertical-align: middle;
+      }
+    }
   }
 
   .thead > *,
   .tbody > * {
-    padding: 9px 12px;
+    padding: 18px 12px;
 
-    @media (min-width: $screen-sm) {
-      padding: 9px 20px;
+    @media (min-width: $screen-md) {
+      padding: 12px 20px;
     }
   }
 
@@ -63,7 +71,7 @@
   }
 
   a {
-    color: $base-text-color;
+    color: $text-color-base;
 
     &:hover {
       color: $link-hover;
@@ -74,15 +82,29 @@
     table-layout: auto;
 
     .thread-title {
-      font-size: 16px;
+      font-size: 14px;
+
+      p {
+        margin: 3px 0 0;
+        font-size: 11px;
+        color: $text-color-lightgray;
+
+        a {
+          color: $text-color-lightgray;
+        }
+      }
     }
 
     .thread-icon {
       width: 24px;
 
-      i {
-        vertical-align: middle;
+      i,
+      img {
         margin-right: 10px;
+        border-radius: 36px;
+        width: 36px;
+        height: 36px;
+        vertical-align: middle;
       }
     }
 
@@ -93,25 +115,47 @@
       .thread-icon {
         width: 36px;
 
-        i {
+        i,
+        img {
           margin-right: 18px;
         }
       }
     }
   }
 
+  .main {
+    padding-bottom: 0;
+  }
+
   .num {
+    display: inline-block;
     text-align: center;
+    padding: 9px 8px;
+  }
+
+  .num-xs,
+  .update {
+    padding-left: 58px;
   }
 
   .update {
+    display: block;
+    padding-top: 0;
+
+    .thread-icon {
+      vertical-align: middle;
+    }
+    .thread-title {
+      font-size: $font-size-small;
+    }
+
     .avatar img {
       margin-right: 6px;
       border-radius: 28px;
       width: 28px;
       height: 28px;
 
-      @media (min-width: $screen-sm) {
+      @media (min-width: $screen-md) {
         margin-right: 12px;
         border-radius: 36px;
         width: 36px;
@@ -120,24 +164,7 @@
     }
 
     p {
-      margin: 0;
-      font-size: 11px;
-      color: #a9a9a9;
-    }
-  }
-
-  .main {
-    padding-bottom: 0;
-  }
-  .num {
-    display: inline-block;
-  }
-  .update {
-    display: block;
-    padding-top: 0;
-
-    .thread-title {
-      font-size: $font-size-small;
+      margin: 0 !important;
     }
   }
   @media (min-width: $screen-sm) {
@@ -150,51 +177,70 @@
       padding-top: 9px;
     }
 
+    .num-xs,
+    .update {
+      padding-left: 12px;
+    }
+
     .num {
-      width: 100px;
+      width: 80px;
     }
     .update {
-      width: 180px;
+      width: 160px;
+
+      @media (min-width: $screen-md) {
+        width: 180px;
+      }
     }
   }
-}
 
-.icon-athletes,
-.icon-posts,
-.icon-messages {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 100%;
-  width: 10px;
-  height: 10px;
-  margin-right: 4px;
-  opacity: .5;
-}
+  .icon-athletes,
+  .icon-posts,
+  .icon-messages {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    opacity: .3;
+  }
 
-.icon-athletes {
-  background-image: url('/svg/athletes.svg');
-}
-.icon-posts {
-  background-image: url('/svg/posts.svg');
-}
-.icon-messages {
-  background-image: url('/svg/messages.svg');
-}
+  .icon-athletes {
+    background-image: url('/svg/athletes.svg');
+  }
+  .icon-posts {
+    background-image: url('/svg/posts.svg');
+  }
+  .icon-messages {
+    background-image: url('/svg/messages.svg');
+  }
 
-.icon-cycling,
-.icon-running {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 100%;
-  width: 36px;
-  height: 36px;
-}
+  .icon-admin,
+  .icon-cycling,
+  .icon-running,
+  .icon-challenge {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+    width: 36px;
+    height: 36px;
+  }
 
-.icon-cycling {
-  background-image: url('/svg/cycling.svg');
-}
-.icon-running {
-  background-image: url('/svg/running.svg');
+  .icon-admin {
+    background-image: url('/svg/admin.png');
+    width: 30px;
+    height: 35px;
+  }
+  .icon-cycling {
+    background-image: url('/svg/cycling.svg');
+  }
+  .icon-running {
+    background-image: url('/svg/running.svg');
+  }
+  .icon-challenge {
+    background-image: url('/svg/challenge.svg');
+  }
 }

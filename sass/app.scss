@@ -5,11 +5,12 @@
 @import 'header';
 @import 'footer';
 @import 'thread';
+@import 'post-list';
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: $font-size-base;
-  color: $base-text-color;
+  color: $text-color-base;
 }
 
 a:hover {
