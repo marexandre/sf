@@ -1,5 +1,8 @@
 <div class="col-md-12">
-  <h1><a href="/">Forum</a>{{#if title}} - {{title}}{{/if}}</h1>
+  <div class="forum-head clearfix">
+    <h1 class="pull-left"><a href="/">Forum</a>{{#if title}} - {{title}}{{/if}}</h1>
+    <a href="/post/create" class="btn btn-strava btn-create-post pull-right">Create a Post</a>
+  </div>
 
   <div class="thread post-list">
     <ul class="list-unstyled list-thread thead hidden-xs">

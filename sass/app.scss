@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'typography';
 @import 'strava';
+@import 'btn';
 @import 'nav';
 @import 'header';
 @import 'footer';
@@ -15,4 +16,26 @@ body {
 
 a:hover {
   color: $link-hover;
+}
+
+
+.forum-head {
+  margin: 20px 0;
+
+  h1 {
+    margin: 0;
+  }
+
+  .btn-create-post {
+    color: #fff;
+    background-color: $brand-color;
+    border-color: $brand-color;
+    margin-top: 16px;
+    width: 100%;
+
+    @media (min-width: $screen-xs) {
+      width: auto;
+      margin-top: 0;
+    }
+  }
 }
