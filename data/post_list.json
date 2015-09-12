@@ -1,9 +1,9 @@
 [
   {
-    "post_id": 1,
     "post": {
+      "id": 1,
       "title": "BRAND NEW Large 2015 SHIV PRO RACE, UPGRADED. PRICE DROP",
-      "usser_id": 1,
+      "user_id": 1,
       "user_name": "Alex K",
       "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
       "date": "September 1, 2015"
@@ -12,17 +12,17 @@
     "views": 145,
     "kudos": 23,
     "update": {
-      "usser_id": 2,
+      "user_id": 2,
       "user_name": "Minori Kikugawa",
       "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/1294718\/558060\/6\/medium.jpg",
       "last_updated": "11 days ago"
     }
   },
   {
-    "post_id": 1,
     "post": {
+      "id": 2,
       "title": "FS - Roval Carbon tubular ($300)/ Specialized S-works Trivents 45.5 ($200 shipped)",
-      "usser_id": 2,
+      "user_id": 2,
       "user_name": "Minori Kikugawa",
       "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/1294718\/558060\/6\/medium.jpg",
       "date": "September 1, 2015"
@@ -31,7 +31,7 @@
     "views": 145,
     "kudos": 23,
     "update": {
-      "usser_id": 1,
+      "user_id": 1,
       "user_name": "Alex K",
       "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
       "last_updated": "2 months ago"
