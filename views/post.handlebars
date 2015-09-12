@@ -17,32 +17,35 @@
     </hgroup>
 
     <div class="col-md-9">
-
-      <div class="post">
-        <div class="post-meta">
-          <img src="{{post.user.image}}" />
-          <p>{{number post.user.kudos}}</p>
-        </div>
-
-        <div class="post-body">
-          <p class="post-date">
-            <a href="#{{post.user.id}}">{{post.user.name}}</a>, {{post.date}}
-          </p>
-
-          <div class="post-message">
-            {{{breaklines post.body}}}
+      <ul class="list-unstyled list-post">
+      {{#each post.comments}}
+        <li class="post">
+          <div class="post-meta">
+            <img src="{{user.image}}" />
+            <p>{{number user.kudos}}</p>
           </div>
 
-          <div class="post-attachments"></div>
+          <div class="post-body">
+            <p class="post-date">
+              <a href="#{{user.id}}">{{user.name}}</a>, {{date}}
+            </p>
 
-          <div class="post-footer">
-            <div class="btn-kudo">
-              <i class="icon-kudo icon-dark"></i>
-              <span class="count">{{number post.kudos}}</span>
+            <div class="post-message">
+              {{{breaklines body}}}
+            </div>
+
+            <div class="post-attachments"></div>
+
+            <div class="post-footer">
+              <div class="btn-kudo">
+                <i class="icon-kudo icon-dark"></i>
+                <span class="count">{{number kudos}}</span>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      {{/each}}
+      </ul>
 
       <div class="comment">
         <h2>Comment</h2>

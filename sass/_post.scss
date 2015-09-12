@@ -24,6 +24,10 @@
   }
 }
 
+.list-post {
+  margin-bottom: 0;
+}
+
 .post {
   display: table;
   margin-bottom: 30px;
@@ -31,6 +35,10 @@
   > div {
     display: table-cell;
     vertical-align: top;
+  }
+
+  &:last-child .post-footer {
+    border-color: transparent;
   }
 
   .post-meta,
@@ -68,6 +76,10 @@
         border-radius: 48px;
       }
     }
+  }
+
+  .post-body {
+    width: 100%;
   }
 
   .post-footer {

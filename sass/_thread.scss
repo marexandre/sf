@@ -101,9 +101,9 @@
       i,
       img {
         margin-right: 10px;
-        border-radius: 36px;
         width: 36px;
         height: 36px;
+        border-radius: 36px;
         vertical-align: middle;
       }
     }
@@ -196,11 +196,13 @@
 
   .icon-athletes,
   .icon-posts,
-  .icon-messages {
+  .icon-messages,
+  .icon-views {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: left top;
     background-size: 100%;
+    position: relative;
     width: 12px;
     height: 12px;
     margin-right: 4px;
@@ -215,6 +217,13 @@
   }
   .icon-messages {
     background-image: url('/svg/messages.svg');
+    top: 2px;
+  }
+  .icon-views {
+    background-image: url('/svg/views.svg');
+    width: 14px;
+    height: 12px;
+    top: 1px;
   }
 
   .icon-admin,
@@ -231,8 +240,9 @@
 
   .icon-admin {
     background-image: url('/svg/admin.png');
-    width: 30px;
-    height: 35px;
+    width: 30px !important;
+    height: 35px !important;
+    border-radius: 0 !important;
   }
   .icon-cycling {
     background-image: url('/svg/cycling.svg');
