@@ -43,7 +43,8 @@ var app = express()
 app
   .get('/', APP.index)
   .get('/category/:forum_id', APP.category)
-  .get('/post/:post_id', APP.post);
+  .get('/post/:post_id', APP.post)
+  .get('/create', APP.create);
 
 
 var port = process.env.PORT || 8999;

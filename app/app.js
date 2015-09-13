@@ -74,6 +74,17 @@ exports.post = function(req, res) {
   var post = require(appRoot + '/data/post_'+ postID +'.json');
 
   res.render('post', {
+    title: 'Category Name',
     post: post
   });
 };
+
+
+// GET /create
+exports.create = function(req, res) {
+  res.render('post_create', {
+    title: 'Category Name'
+  });
+
+};
+

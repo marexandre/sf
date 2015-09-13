@@ -1,10 +1,15 @@
-.post-title {
-  margin-bottom: 30px;
-  font-weight: $font-weight-thin;
-
+.comment,
+.post-detail,
+.post-create {
   h2 {
     margin-top: 0;
   }
+}
+
+
+.post-title {
+  margin-bottom: 30px;
+  font-weight: $font-weight-thin;
 
   .divider {
     background-color: $text-color-base;
@@ -104,9 +109,27 @@
   }
 }
 
+.post-create {
+  .select-post-type .form-group {
+    display: inline-block;
+
+    & + .form-group {
+      margin-left: 18px;
+    }
+
+    select {
+      min-width: 120px;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
+
 .comment {
   h2 {
-    margin: 0 0 20px;
+    margin-bottom: 20px;
   }
 
   .comment-wrap {

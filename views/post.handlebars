@@ -1,10 +1,10 @@
 <div class="col-md-12">
   <div class="forum-head clearfix">
     <h1 class="pull-left"><a href="/">Forum</a>{{#if title}} - {{title}}{{/if}}</h1>
-    <a href="/post/create" class="btn btn-strava btn-create-post pull-right hidden-xs">Create a Post</a>
+    <a href="/create" class="btn btn-strava btn-create-post pull-right hidden-xs">Create a Post</a>
   </div>
 
-  <div class="row">
+  <div class="row post-detail">
     <hgroup class="post-title col-md-12">
       <h2>{{post.title}}</h2>
       <ul class="list-inline list-post-meta">
@@ -55,9 +55,13 @@
           </div>
           <div class="comment-form">
             <form>
-              <textarea class="form-control"></textarea>
-              <button type="submit" class="btn btn-default btn-strava">Add Comment</button>
-              <button type="cancel" class="btn btn-link">Cancel</button>
+              <div class="form-group">
+                <textarea class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-default btn-strava">Add Comment</button>
+                <button type="cancel" class="btn btn-link btn-cancel">Cancel</button>
+              </div>
             </form>
 
           </div>

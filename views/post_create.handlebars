@@ -1,0 +1,47 @@
+<div class="col-md-12">
+  <div class="forum-head clearfix">
+    <h1 class="pull-left"><a href="/">Forum</a>{{#if title}} - {{title}}{{/if}}</h1>
+  </div>
+
+  <div class="row post-create">
+    <h2 class="col-md-12">Create Post</h2>
+
+    <form>
+      <div class="col-md-8 select-post-type">
+        <div class="form-group">
+          <label for="post-forum-select">Forum</label>
+          <select id="post-forum-select" name="forum-type">
+            <option value="cycling" selected="selected">Cycling</option>
+            <option value="running">Running</option>
+            <option value="Challenge">Challenge</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="post-category-select">Category</label>
+          <select id="post-category-select" name="category-type">
+            <option value="cycling" selected="selected">Racing</option>
+            <option value="running">Gear</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group col-md-8">
+        <label for="post-create-title">Post Title</label>
+        <input type="text" class="form-control" id="post-create-title" placeholder="Title">
+      </div>
+
+      <div class="form-group col-md-8">
+        <label for="post-create-body">Post Body</label>
+        <textarea class="form-control"></textarea>
+      </div>
+
+      <div class="form-group col-md-8">
+        <button type="submit" class="btn btn-default btn-strava btn-strava-dark">Create Post</button>
+        <button type="cancel" class="btn btn-link btn-cancel">Cancel</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>

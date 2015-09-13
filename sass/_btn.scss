@@ -15,6 +15,16 @@
   border: 1px solid #ccc;
 }
 
+.btn-strava-dark {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
+.btn-cancel {
+  font-size: $font-size-small;
+}
+
 .btn-create-post {
   color: #fff;
   background-color: $brand-color;

@@ -1,0 +1,36 @@
+.form-group {
+  margin-bottom: 18px;
+
+  select,
+  input,
+  textarea {
+    outline: 0;
+  }
+
+  input.form-control,
+  textarea.form-control {
+    border-radius: 0;
+    padding: 4px 6px;
+
+    &:focus {
+      border-color: $link-hover;
+      box-shadow: none;
+    }
+  }
+
+  label {
+    display: block;
+    color: $text-color-gray;
+    font-size: $font-size-small;
+    font-weight: $font-weight-base;
+  }
+
+  select {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 13px;
+    height: 34px;
+  }
+}
