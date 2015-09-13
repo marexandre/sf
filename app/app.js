@@ -69,9 +69,16 @@ exports.category = function(req, res) {
 // GET /post/:post_id
 exports.post = function(req, res) {
   var postID = parseInt(req.params.post_id, 10);
+  var post;
 
-  postID = 1;
-  var post = require(appRoot + '/data/post_'+ postID +'.json');
+  switch (postID) {
+    case 1:
+    case 2:
+      post = require(appRoot + '/data/post_'+ postID +'.json');
+      break;
+    default:
+      post = require(appRoot + '/data/post_1.json');
+  }
 
   res.render('post', {
     title: 'Category Name',
