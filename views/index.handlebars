@@ -4,12 +4,15 @@
   </div>
 
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#">Active</a></li>
-    <li ><a href="#">Starred</a></li>
-    <li ><a href="#">Archived</a></li>
+    <li class="active" data-forum-type="active"><a href="#">Active</a></li>
+    <li data-forum-type="kudos"><a href="#">Kudos</a></li>
+    <li data-forum-type="archived"><a href="#">Archived</a></li>
   </ul>
 
   <div class="thread">
+    {{> ajax_loader}}
+
+    {{!-- Thread header --}}
     <ul class="list-unstyled list-thread thead hidden-xs">
       <li class="main">Category</li>
       <li class="num">Athletes</li>
@@ -17,46 +20,11 @@
       <li class="num">Messages</li>
       <li class="update">Last Updated</li>
     </ul>
-    <ul class="list-unstyled list-thread">
-      {{#each data}}
-      <li class="tbody">
-        <div class="main">
-          <div class="thread-meta">
-            <div class="thread-icon">
-              <i class="icon-{{category}}"></i>
-            </div>
-            <div class="thread-title">
-              <a href="category/{{forum_id}}">{{label}}</a>
-            </div>
-          </div>
-        </div>
-        <div class="num num-xs">
-          <i class="icon-athletes visible-xs-inline-block"></i>
-          {{number athletes}}
-        </div>
-        <div class="num">
-          <i class="icon-posts visible-xs-inline-block"></i>
-          {{number posts}}
-        </div>
-        <div class="num">
-          <i class="icon-messages visible-xs-inline-block"></i>
-          {{number messages}}
-        </div>
-        <div class="update">
-          <div class="thread-meta">
-            <div class="thread-icon avatar">
-              <img src="{{update.user_image}}" />
-            </div>
-            <div class="thread-title">
-              <a href="#">{{update.user_name}}</a>
-              <p class="date">{{relativeTime  update.last_updated}}</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      {{/each}}
+
+    {{!-- Thread content list --}}
+    <ul id="category-list" class="list-unstyled list-thread">
+      {{> shared/category_list}}
     </ul>
   </div>
-
 
 </div>

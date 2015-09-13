@@ -8,11 +8,16 @@
     <hgroup class="post-title col-md-12">
       <h2>{{post.title}}</h2>
       <ul class="list-inline list-post-meta">
-        <li>{{number post.meta.messages}} Messages</li>
+        <li class="messages"><span class="count">{{number post.meta.messages}}</span> Messages</li>
         <li class="divider"></li>
-        <li>{{number post.meta.views}} Views</li>
+        <li class="views"><span class="count">{{number post.meta.views}}</span> Views</li>
         <li class="divider"></li>
-        <li>{{number post.meta.kudos}} Kudos</li>
+        <li class="kudos">
+          <div class="btn-kudo">
+            <i class="icon-kudo icon-dark"></i>
+            <span class="count">{{number post.meta.kudos}}</span> Kudos
+          </div>
+        </li>
       </ul>
     </hgroup>
 

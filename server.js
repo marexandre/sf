@@ -3,17 +3,18 @@
 var path = require('path');
 global.appRoot = path.resolve(__dirname);
 
-var express = require('express');
-var exphbs  = require('express-handlebars');
-var API     = require('./api/api');
-var APP     = require('./app/app');
+var express    = require('express');
+var exphbs     = require('express-handlebars');
+var API        = require('./api/api');
+var APP        = require('./app/app');
+var middleware = require('./app/middleware');
 
 /*
  * Setup Handlebars
  */
 var numeral = require('numeral');
 var moment = require('moment');
-var hbs = exphbs({
+var hbs = exphbs.create({
   defaultLayout: 'main',
   extname: '.handlebars',
   helpers: {
@@ -32,21 +33,26 @@ var hbs = exphbs({
   }
 });
 
-/**
- * API
- */
-var api = express()
-  .get('/ping', API.ping);
 
 /**
- * Web App
+ * API endpoint
+ */
+var api = express()
+  .get('/ping', API.ping)
+  .get('/getForum/:forum_type', middleware.delay, API.getForum);
+
+
+/**
+ * Web endpoint
  */
 var app = express()
-  .use('/api', api)
-  .use(express.static(__dirname + '/public'))
-  .engine('handlebars', hbs)
+  .engine('handlebars', hbs.engine)
   .set('view engine', 'handlebars')
-  .get('/', APP.index)
+  .use(express.static(__dirname + '/public'));
+  // Endpoints
+  app
+  .use('/api', api)
+  .get('/', middleware.exposeTemplates(app, hbs), APP.index)
   .get('/category/:forum_id', APP.category)
   .get('/post/:post_id', APP.post)
   .get('/create', APP.create);

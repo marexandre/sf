@@ -60,7 +60,7 @@ exports.category = function(req, res) {
     tmpList.push(postList[i % 2]);
   }
 
-  res.render('category', {
+  res.render('post_list', {
     title: title,
     data: tmpList
   });

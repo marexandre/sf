@@ -8,7 +8,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
-  js: ['./server.js', './app/**/*.js', './api/**/*.js'],
+  js: ['./server.js', './app/**/*.js', './api/**/*.js', './public/js/**/*.js'],
   sass: ['./sass/**/*.scss', './sass/**/_*.scss'],
   css: './public/css'
 };

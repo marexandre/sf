@@ -1,6 +1,20 @@
 .thread {
   margin: 20px 0;
   font-size: $font-size-small;
+  position: relative;
+
+  .no-items {
+    margin: 40px 0;
+    text-align: center;
+
+    h4 {
+      font-weight: $font-weight-base;
+    }
+  }
+
+  .list-thread + .list-thread {
+    border-bottom: 1px solid #e5e5e5;
+  }
 
   .thead,
   .tbody {

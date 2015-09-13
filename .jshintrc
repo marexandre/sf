@@ -51,6 +51,7 @@
   "globals": {
     "define": true,
     "settings": true,
-    "appRoot": true
+    "appRoot": true,
+    "Handlebars": true
   }
 }

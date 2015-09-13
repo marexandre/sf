@@ -26,6 +26,22 @@
     @media (min-width: $screen-xs) {
       font-size: $font-size-base;
     }
+
+    .btn-kudo {
+      padding: 0;
+      line-height: 17px;
+
+      .count {
+        vertical-align: inherit;
+      }
+
+      .icon-kudo {
+        margin-right: 0;
+        width: 17px;
+        height: 17px;
+        top: -3px;
+      }
+    }
   }
 }
 

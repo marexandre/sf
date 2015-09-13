@@ -16,6 +16,11 @@ body {
   color: $text-color-base;
 }
 
+a:focus,
+li:focus {
+  outline: 0;
+}
+
 a:hover {
   color: $link-hover;
 }

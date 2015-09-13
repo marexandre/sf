@@ -7,10 +7,14 @@
       border-top: 0;
       border-radius: 0;
 
+      &:hover,
+      &:focus {
+        border-top: 0;
+      }
+
       &:hover {
         color: $text-color-base;
         cursor: pointer;
-        border-top: 0;
       }
     }
   }
