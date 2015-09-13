@@ -30,7 +30,7 @@ var api = express()
 
 
 /**
- * Web endpoint
+ * Web app
  */
 var app = express()
   .engine('handlebars', hbs.engine)

@@ -70,4 +70,4 @@ gulp.task('sass-watch', function() {
 
 
 gulp.task('dev', ['nodemon', 'js-watch', 'sass-watch']);
-gulp.task('default', ['lint', 'sass']);
+gulp.task('default', ['lint', 'sass', 'js']);
