@@ -5319,7 +5319,7 @@ $(function() {
 
 });
 
-}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_b4125c2a.js","/")
+}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_97cafe20.js","/")
 },{"+7ZJp0":4,"../../../shared/js/helpers.js":11,"./file_upload.js":8,"./forum.js":9,"./post_detail.js":10,"buffer":1}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {
@@ -5470,7 +5470,7 @@ $(function() {
 
     $.post('/api/messsage', data)
       .done(function(res) {
-        $messsageTextarea.val('').trigger('keyup');
+        clearComment();
         $('.list-post').append(Handlebars.templates.post(res));
         updateMesssageCount(1);
       })
@@ -5485,9 +5485,14 @@ $(function() {
   // On messsage cancel button click
   $messsageForm.find('.btn-cancel').on('click', function(e) {
     e.preventDefault();
+    clearComment();
+  });
+
+
+  function clearComment() {
     $('#attachments').hide().empty();
     $messsageTextarea.val('').trigger('keyup');
-  });
+  }
 
 });
 

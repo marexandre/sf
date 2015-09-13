@@ -59,7 +59,7 @@ $(function() {
 
     $.post('/api/messsage', data)
       .done(function(res) {
-        $messsageTextarea.val('').trigger('keyup');
+        clearComment();
         $('.list-post').append(Handlebars.templates.post(res));
         updateMesssageCount(1);
       })
@@ -74,8 +74,13 @@ $(function() {
   // On messsage cancel button click
   $messsageForm.find('.btn-cancel').on('click', function(e) {
     e.preventDefault();
+    clearComment();
+  });
+
+
+  function clearComment() {
     $('#attachments').hide().empty();
     $messsageTextarea.val('').trigger('keyup');
-  });
+  }
 
 });
