@@ -163,6 +163,14 @@
       font-size: $font-size-small;
     }
 
+    .no-message {
+      margin: 0;
+      text-align: center;
+      font-size: $font-size-small;
+      color: $text-color-lightgray;
+      cursor: pointer;
+    }
+
     .avatar img {
       margin-right: 6px;
       border-radius: 28px;

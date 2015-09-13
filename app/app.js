@@ -14,7 +14,7 @@ exports.index = function(req, res) {
 exports.category = function(req, res) {
   var forumID = parseInt(req.params.forum_id, 10);
   var title = '';
-  var imax = 10;
+  var imax = 6;
 
   switch (forumID) {
     case 1:
@@ -55,9 +55,11 @@ exports.category = function(req, res) {
       break;
   }
 
+  req.session.post_title = title;
+
   var tmpList = [];
   for (var i = 0; i < imax; i++) {
-    tmpList.push(postList[i % 2]);
+    tmpList.push(postList[i % 3]);
   }
 
   res.render('post_list', {
@@ -74,14 +76,20 @@ exports.post = function(req, res) {
   switch (postID) {
     case 1:
     case 2:
+    case 3:
       post = require(appRoot + '/data/post_'+ postID +'.json');
       break;
     default:
       post = require(appRoot + '/data/post_1.json');
   }
 
+  var title = 'Category Name';
+  if (req.session.post_title) {
+    title = req.session.post_title;
+  }
+
   res.render('post', {
-    title: 'Category Name',
+    title: title,
     post: post
   });
 };

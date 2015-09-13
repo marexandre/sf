@@ -5,6 +5,7 @@ global.appRoot = path.resolve(__dirname);
 
 var bodyParser = require('body-parser');
 var express    = require('express');
+var session    = require('express-session');
 var exphbs     = require('express-handlebars');
 var API        = require('./api/api');
 var APP        = require('./app/app');
@@ -35,6 +36,12 @@ var api = express()
 var app = express()
   .engine('handlebars', hbs.engine)
   .set('view engine', 'handlebars')
+  .use(session({
+    secret: 'keyboard cat',
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
+  }))
   .use(bodyParser.urlencoded({extended: false}))
   .use(express.static(__dirname + '/public'));
   // Endpoints

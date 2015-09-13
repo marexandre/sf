@@ -24,13 +24,17 @@
     </div>
     <div class="update">
       <div class="thread-meta">
+        {{#if update.user_id}}
         <div class="thread-icon avatar">
           <img src="{{update.user_image}}" />
         </div>
         <div class="thread-title">
-          <a href="#">{{update.user_name}}</a>
+          <a href="#{{update.user_id}}">{{update.user_name}}</a>
           <p class="date">{{relativeTime update.last_updated}}</p>
         </div>
+        {{else}}
+        <a href="/post/{{post.id}}" class="no-message">Leave a message</a>
+        {{/if}}
       </div>
     </div>
   </li>
