@@ -181,8 +181,15 @@ h4 {
   border-color: #333;
 }
 
+.btn-add-photo,
 .btn-cancel {
   font-size: 12px;
+}
+
+.btn-add-photo {
+  padding: 0;
+  border: 0;
+  line-height: 12px;
 }
 
 .btn-create-post {
@@ -1055,6 +1062,23 @@ footer .newsletter .email {
   min-height: 120px;
 }
 
+.attachments {
+  display: none;
+  margin-top: 8px;
+  margin-left: -2%;
+  padding: 0;
+}
+
+.attachments img {
+  margin-left: 2%;
+  margin-bottom: 8px;
+  width: 23%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1062,8 +1086,9 @@ body {
 }
 
 a:focus,
-li:focus {
-  outline: 0;
+li:focus,
+button:focus {
+  outline: 0 !important;
 }
 
 a:hover {
