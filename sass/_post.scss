@@ -85,6 +85,21 @@
 
   .post-body {
     width: 100%;
+
+    .icon-remove {
+      display: none;
+      margin-right: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  & + .post {
+    &:hover .icon-remove {
+      display: inline-block;
+    }
   }
 
   .post-footer {
