@@ -32,15 +32,6 @@ $(function() {
   var $messsageTextarea  = $messsageForm.find('textarea');
   var $messsagesubmitBtn = $messsageForm.find('.btn-submit');
 
-  // When user is typing
-  $messsageTextarea.on('keyup', function() {
-    if ($messsageTextarea.val().length === 0) {
-      $messsagesubmitBtn.addClass('disabled');
-    } else {
-      $messsagesubmitBtn.removeClass('disabled');
-    }
-  });
-
   // On messsage submit button click
   $messsagesubmitBtn.on('click', function(e) {
     e.preventDefault();

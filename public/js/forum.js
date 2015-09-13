@@ -5281,6 +5281,7 @@ process.chdir = function (dir) {
 require('./post_detail.js');
 require('./forum.js');
 require('./file_upload.js');
+require('./form.js');
 /* jshint ignore:end */
 
 var helpers = require('../../../shared/js/helpers.js');
@@ -5319,8 +5320,8 @@ $(function() {
 
 });
 
-}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_97cafe20.js","/")
-},{"+7ZJp0":4,"../../../shared/js/helpers.js":11,"./file_upload.js":8,"./forum.js":9,"./post_detail.js":10,"buffer":1}],8:[function(require,module,exports){
+}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_377e254a.js","/")
+},{"+7ZJp0":4,"../../../shared/js/helpers.js":12,"./file_upload.js":8,"./form.js":9,"./forum.js":10,"./post_detail.js":11,"buffer":1}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {
   'use strict';
@@ -5371,6 +5372,27 @@ $(function() {
 },{"+7ZJp0":4,"buffer":1}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {
+  'use strict';
+
+  var $form = $('form');
+  var $messsageTextarea  = $form.find('textarea');
+  var $messsagesubmitBtn = $form.find('.btn-submit');
+
+  // When user is typing
+  $messsageTextarea.on('keyup', function() {
+    if ($messsageTextarea.val().length === 0) {
+      $messsagesubmitBtn.addClass('disabled');
+    } else {
+      $messsagesubmitBtn.removeClass('disabled');
+    }
+  });
+
+});
+
+}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/form.js","/")
+},{"+7ZJp0":4,"buffer":1}],10:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+$(function() {
 
   /**
    * When tabs clicked on forum top page, update the forum list
@@ -5407,7 +5429,7 @@ $(function() {
 });
 
 }).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/forum.js","/")
-},{"+7ZJp0":4,"buffer":1}],10:[function(require,module,exports){
+},{"+7ZJp0":4,"buffer":1}],11:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {
   'use strict';
@@ -5442,15 +5464,6 @@ $(function() {
   var $messsagesLoader   = $messsageForm.find('.loading-panel');
   var $messsageTextarea  = $messsageForm.find('textarea');
   var $messsagesubmitBtn = $messsageForm.find('.btn-submit');
-
-  // When user is typing
-  $messsageTextarea.on('keyup', function() {
-    if ($messsageTextarea.val().length === 0) {
-      $messsagesubmitBtn.addClass('disabled');
-    } else {
-      $messsagesubmitBtn.removeClass('disabled');
-    }
-  });
 
   // On messsage submit button click
   $messsagesubmitBtn.on('click', function(e) {
@@ -5497,7 +5510,7 @@ $(function() {
 });
 
 }).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/post_detail.js","/")
-},{"+7ZJp0":4,"buffer":1}],11:[function(require,module,exports){
+},{"+7ZJp0":4,"buffer":1}],12:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 

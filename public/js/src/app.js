@@ -2,6 +2,7 @@
 require('./post_detail.js');
 require('./forum.js');
 require('./file_upload.js');
+require('./form.js');
 /* jshint ignore:end */
 
 var helpers = require('../../../shared/js/helpers.js');

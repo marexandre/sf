@@ -6,7 +6,8 @@
   <div class="row post-create">
     <h2 class="col-md-12">Create Post</h2>
 
-    <form>
+    {{!-- method should be POST, but as this is an prototype we use it as an redirect --}}
+    <form action="/post/1" method="get" enctype="multipart/form-data">
       <div class="col-md-8 select-post-type">
         <div class="form-group">
           <label for="post-forum-select">Forum</label>
@@ -43,7 +44,7 @@
       </div>
 
       <div class="form-group col-md-8">
-        <button type="submit" class="btn btn-default btn-strava btn-strava-dark">Create Post</button>
+        <button type="submit" class="btn btn-default btn-strava btn-strava-dark btn-submit disabled">Create Post</button>
         <button type="cancel" class="btn btn-link btn-cancel">Cancel</button>
       </div>
     </form>

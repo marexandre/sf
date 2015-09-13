@@ -181,6 +181,13 @@ h4 {
   border-color: #333;
 }
 
+.btn-strava-dark.disabled,
+.btn-strava-dark.disabled:hover {
+  color: #ccc;
+  background-color: #555;
+  border-color: #555;
+}
+
 .btn-add-photo,
 .btn-cancel {
   font-size: 12px;
