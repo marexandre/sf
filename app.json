@@ -1,0 +1,7 @@
+{
+  "name": "Strava Forum Challenge",
+  "description": "An challenge to create an Strava Forum",
+  "repository": "https://github.com/marexandre/sf",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
