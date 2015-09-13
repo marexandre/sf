@@ -22,7 +22,7 @@
             </div>
             <div class="thread-title">
               <a href="/post/{{post.id}}">{{post.title}}</a>
-              <p><a href="#{{post.user_id}}">{{post.user_name}}</a>, {{post.date}}</p>
+              <p><a href="#{{post.user_id}}">{{post.user_name}}</a>, {{relativeTime  post.date}}</p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
             </div>
             <div class="thread-title">
               <a href="#">{{update.user_name}}</a>
-              <p class="date">{{update.last_updated}}</p>
+              <p class="date">{{relativeTime  update.last_updated}}</p>
             </div>
           </div>
         </div>
