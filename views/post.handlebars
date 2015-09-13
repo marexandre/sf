@@ -36,13 +36,18 @@
           </div>
           <div class="messsage-form">
             {{> ajax_loader}}
-            <form>
+            <form action="/api/messsage" method="post" enctype="multipart/form-data">
               <div class="form-group">
-                <textarea class="form-control"></textarea>
+                <textarea name="messageBody" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="file" name="fileUpload" id="fileUpload" class="hide" multiple>
+                <button type="button" class="btn btn-link btn-add-photo">Add photo</button>
+                <div id="attachments" class="col-md-12 attachments"></div>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-default btn-strava btn-submit disabled">Add Comment</button>
-                <button type="cancel" class="btn btn-link btn-cancel">Cancel</button>
+                <button type="reset" class="btn btn-link btn-cancel">Cancel</button>
               </div>
             </form>
 

@@ -9,6 +9,7 @@
 @import 'thread';
 @import 'post-list';
 @import 'post';
+@import 'attachments';
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -17,8 +18,9 @@ body {
 }
 
 a:focus,
-li:focus {
-  outline: 0;
+li:focus,
+button:focus {
+  outline: 0 !important;
 }
 
 a:hover {

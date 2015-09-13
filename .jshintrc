@@ -50,6 +50,7 @@
 
   "globals": {
     "confirm": true,
+    "alert": true,
     "define": true,
     "settings": true,
     "appRoot": true,

@@ -10,7 +10,7 @@
       <div class="col-md-8 select-post-type">
         <div class="form-group">
           <label for="post-forum-select">Forum</label>
-          <select id="post-forum-select" name="forum-type">
+          <select id="post-forum-select" name="forumType">
             <option value="cycling" selected="selected">Cycling</option>
             <option value="running">Running</option>
             <option value="Challenge">Challenge</option>
@@ -19,7 +19,7 @@
 
         <div class="form-group">
           <label for="post-category-select">Category</label>
-          <select id="post-category-select" name="category-type">
+          <select id="post-category-select" name="categoryType">
             <option value="cycling" selected="selected">Racing</option>
             <option value="running">Gear</option>
           </select>
@@ -28,12 +28,18 @@
 
       <div class="form-group col-md-8">
         <label for="post-create-title">Post Title</label>
-        <input type="text" class="form-control" id="post-create-title" placeholder="Title">
+        <input type="text" name="title" class="form-control" id="post-create-title" placeholder="Title">
       </div>
 
       <div class="form-group col-md-8">
         <label for="post-create-body">Post Body</label>
-        <textarea class="form-control"></textarea>
+        <textarea class="form-control" name="postBody"></textarea>
+      </div>
+
+      <div class="form-group col-md-8">
+        <input type="file" name="fileUpload" id="fileUpload" class="hide" multiple>
+        <button type="button" class="btn btn-link btn-add-photo">Add photo</button>
+        <div id="attachments" class="col-md-12 attachments"></div>
       </div>
 
       <div class="form-group col-md-8">

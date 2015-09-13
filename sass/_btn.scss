@@ -21,9 +21,17 @@
   border-color: #333;
 }
 
+.btn-add-photo,
 .btn-cancel {
   font-size: $font-size-small;
 }
+
+.btn-add-photo {
+  padding: 0;
+  border: 0;
+  line-height: $font-size-small;
+}
+
 
 .btn-create-post {
   color: #fff;

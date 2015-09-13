@@ -1,4 +1,6 @@
 $(function() {
+  'use strict';
+
   var $postDetail = $('.post-detail');
   var messagesCount = $postDetail.find('.messages .count');
 
@@ -67,12 +69,13 @@ $(function() {
       .always(function() {
         $messsagesLoader.hide();
       });
-    });
+  });
 
-   // On messsage cancel button click
-    $messsageForm.find('.btn-cancel').on('click', function(e) {
-      e.preventDefault();
-      $messsageTextarea.val('').trigger('keyup');
-    });
+  // On messsage cancel button click
+  $messsageForm.find('.btn-cancel').on('click', function(e) {
+    e.preventDefault();
+    $('#attachments').hide().empty();
+    $messsageTextarea.val('').trigger('keyup');
+  });
 
 });
