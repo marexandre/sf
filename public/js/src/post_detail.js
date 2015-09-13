@@ -2,81 +2,77 @@ $(function() {
   var $postDetail = $('.post-detail');
   var messagesCount = $postDetail.find('.messages .count');
 
-  function addCommentCount() {
+  function updateMesssageCount(x) {
     var c = parseInt(messagesCount.text(), 10);
-    messagesCount.html(c + 1);
-  }
-  function removeCommentCount() {
-    var c = parseInt(messagesCount.text(), 10);
-    messagesCount.html(c - 1);
+    messagesCount.html(c + x);
   }
 
 
   /**
-   * On delete comment button click
+   * On delete messsage button click
    */
   $postDetail.on('click', '.btn-delete', function(e) {
     e.preventDefault();
 
-    var r = confirm('Are you sure you want to delete this comment?');
+    var r = confirm('Are you sure you want to delete this messsage?');
     if (r === true) {
       $(this).closest('.post').remove();
-      removeCommentCount();
+      updateMesssageCount(-1);
     }
   });
 
 
   /**
-   * When posting a comment on post detail page
+   * When posting a messsage on post detail page
    */
-  var $commentForm      = $postDetail.find('.comment-form');
-  var $commentsLoader   = $commentForm.find('.loading-panel');
-  var $commentTextarea  = $commentForm.find('textarea');
-  var $commentsubmitBtn = $commentForm.find('.btn-submit');
+  var $messsageForm      = $postDetail.find('.messsage-form');
+  var $messsagesLoader   = $messsageForm.find('.loading-panel');
+  var $messsageTextarea  = $messsageForm.find('textarea');
+  var $messsagesubmitBtn = $messsageForm.find('.btn-submit');
 
   // When user is typing
-  $commentTextarea.on('keyup', function() {
-    if ($commentTextarea.val().length === 0) {
-      $commentsubmitBtn.addClass('disabled');
+  $messsageTextarea.on('keyup', function() {
+    if ($messsageTextarea.val().length === 0) {
+      $messsagesubmitBtn.addClass('disabled');
     } else {
-      $commentsubmitBtn.removeClass('disabled');
+      $messsagesubmitBtn.removeClass('disabled');
     }
   });
 
-  // On comment submit button click
-  $commentsubmitBtn.on('click', function(e) {
+  // On messsage submit button click
+  $messsagesubmitBtn.on('click', function(e) {
     e.preventDefault();
 
-    var comment = $commentTextarea.val();
-    if (comment.length === 0) {
+    var messsage = $messsageTextarea.val();
+    if (messsage.length === 0) {
       return;
     }
 
-    $commentsLoader.show();
+    $messsagesLoader.show();
     $(this).blur();
 
     var data = {
-      body: comment
+      body: messsage
     };
 
-    $.post('/api/comment', data)
+    $.post('/api/messsage', data)
       .done(function(res) {
-        $commentTextarea.val('').trigger('keyup');
+        $messsageTextarea.val('').trigger('keyup');
         $('.list-post').append(Handlebars.templates.post(res));
-        addCommentCount();
+        updateMesssageCount(1);
       })
       .fail(function() {
         // TODO: log some error or update UI
       })
       .always(function() {
-        $commentsLoader.hide();
+        $messsagesLoader.hide();
       });
     });
 
-   // On comment cancel button click
-    $commentForm.find('.btn-cancel').on('click', function(e) {
+   // On messsage cancel button click
+    $messsageForm.find('.btn-cancel').on('click', function(e) {
       e.preventDefault();
-      $commentTextarea.val('').trigger('keyup');
+      $messsageTextarea.val('').trigger('keyup');
     });
 
 });

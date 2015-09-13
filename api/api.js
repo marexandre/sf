@@ -25,13 +25,13 @@ exports.getForum = function(req, res) {
 };
 
 
-// POST /comment
-var comment = require(appRoot + '/data/comment_1.json');
-exports.postComment = function(req, res) {
+// POST /messsage
+var messsage = require(appRoot + '/data/messsage_1.json');
+exports.postMesssage = function(req, res) {
   console.log(req.body);
 
-  comment.date = new Date();
-  comment.body = req.body.body;
+  messsage.date = new Date();
+  messsage.body = req.body.body;
 
-  res.json(comment);
+  res.json(messsage);
 };

@@ -26,7 +26,7 @@ var hbs = exphbs.create({
 var api = express()
   .get('/ping', API.ping)
   .get('/getForum/:forum_type', middleware.delay, API.getForum)
-  .post('/comment/', middleware.delay, API.postComment);
+  .post('/messsage/', middleware.delay, API.postMesssage);
 
 
 /**

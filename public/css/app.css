@@ -847,7 +847,7 @@ footer .newsletter .email {
   }
 }
 
-.comment h2,
+.messsage h2,
 .post-detail h2,
 .post-create h2 {
   margin-top: 0;
@@ -1006,52 +1006,52 @@ footer .newsletter .email {
   min-height: 150px;
 }
 
-.comment h2 {
+.messsage h2 {
   margin-bottom: 20px;
 }
 
-.comment .spinner {
+.messsage .spinner {
   position: relative;
   top: 25%;
   margin-top: 0;
 }
 
-.comment .comment-wrap {
+.messsage .messsage-wrap {
   display: table;
   width: 100%;
 }
 
-.comment .comment-wrap > * {
+.messsage .messsage-wrap > * {
   display: table-cell;
   vertical-align: middle;
   position: relative;
 }
 
-.comment .comment-user {
+.messsage .messsage-user {
   width: 32px;
   padding-right: 12px;
   vertical-align: top;
 }
 
-.comment .comment-user img {
+.messsage .messsage-user img {
   width: 32px;
   height: 32px;
   border-radius: 32px;
 }
 
 @media (min-width: 480px) {
-  .comment .comment-user {
+  .messsage .messsage-user {
     width: 48px;
     padding-right: 18px;
   }
-  .comment .comment-user img {
+  .messsage .messsage-user img {
     width: 48px;
     height: 48px;
     border-radius: 48px;
   }
 }
 
-.comment textarea {
+.messsage textarea {
   min-height: 120px;
 }
 

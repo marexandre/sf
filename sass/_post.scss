@@ -1,4 +1,4 @@
-.comment,
+.messsage,
 .post-detail,
 .post-create {
   h2 {
@@ -159,7 +159,7 @@
   }
 }
 
-.comment {
+.messsage {
   h2 {
     margin-bottom: 20px;
   }
@@ -170,7 +170,7 @@
     margin-top: 0;
   }
 
-  .comment-wrap {
+  .messsage-wrap {
     display: table;
     width: 100%;
 
@@ -181,7 +181,7 @@
     }
   }
 
-  .comment-user {
+  .messsage-user {
     width: 32px;
     padding-right: 12px;
     vertical-align: top;
