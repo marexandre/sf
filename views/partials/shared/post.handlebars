@@ -1,0 +1,28 @@
+<li class="post">
+  <div class="post-meta">
+    <img src="{{user.image}}" />
+    <p>{{number user.kudos}}</p>
+  </div>
+
+  <div class="post-body">
+    <p class="post-date clearfix">
+      <a href="#{{user.id}}">{{user.name}}</a>, {{relativeTime date}}
+      <a class="btn-delete icon-remove pull-right">
+        Delete
+      </a>
+    </p>
+
+    <div class="post-message">
+      {{{breaklines body}}}
+    </div>
+
+    <div class="post-attachments"></div>
+
+    <div class="post-footer">
+      <div class="btn-kudo">
+        <i class="icon-kudo icon-dark"></i>
+        <span class="count">{{number kudos}}</span>
+      </div>
+    </div>
+  </div>
+</li>

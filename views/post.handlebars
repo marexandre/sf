@@ -24,34 +24,7 @@
     <div class="col-md-9">
       <ul class="list-unstyled list-post">
       {{#each post.comments}}
-        <li class="post">
-          <div class="post-meta">
-            <img src="{{user.image}}" />
-            <p>{{number user.kudos}}</p>
-          </div>
-
-          <div class="post-body">
-            <p class="post-date clearfix">
-              <a href="#{{user.id}}">{{user.name}}</a>, {{relativeTime date}}
-              <a class="pull-right icon-remove">
-                Delete
-              </a>
-            </p>
-
-            <div class="post-message">
-              {{{breaklines body}}}
-            </div>
-
-            <div class="post-attachments"></div>
-
-            <div class="post-footer">
-              <div class="btn-kudo">
-                <i class="icon-kudo icon-dark"></i>
-                <span class="count">{{number kudos}}</span>
-              </div>
-            </div>
-          </div>
-        </li>
+        {{> shared/post}}
       {{/each}}
       </ul>
 
@@ -62,12 +35,13 @@
             <img src="https://dgalywyr863hv.cloudfront.net/pictures/athletes/7417/4259/2/medium.jpg">
           </div>
           <div class="comment-form">
+            {{> ajax_loader}}
             <form>
               <div class="form-group">
                 <textarea class="form-control"></textarea>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-default btn-strava">Add Comment</button>
+                <button type="submit" class="btn btn-default btn-strava btn-submit disabled">Add Comment</button>
                 <button type="cancel" class="btn btn-link btn-cancel">Cancel</button>
               </div>
             </form>

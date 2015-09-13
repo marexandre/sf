@@ -6,9 +6,11 @@ var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var browserify = require('gulp-browserify');
+var concat = require('gulp-concat');
 
 var paths = {
-  js: ['./server.js', './app/**/*.js', './api/**/*.js', './public/js/**/*.js'],
+  js: ['./server.js', './app/**/*.js', './api/**/*.js', './public/js/src/**/*.js', './shared/**/*.js'],
   sass: ['./sass/**/*.scss', './sass/**/_*.scss'],
   css: './public/css'
 };
@@ -37,6 +39,17 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('fail'));
 });
 
+// Basic usage
+gulp.task('js', function() {
+  gulp.src('./public/js/src/app.js')
+    .pipe(browserify({
+      insertGlobals : true
+    }))
+    .pipe(concat('forum.js'))
+    .pipe(gulp.dest('./public/js/'));
+});
+
+
 gulp.task('nodemon', function() {
   nodemon({
     script: 'server.js',
@@ -48,7 +61,7 @@ gulp.task('nodemon', function() {
 
 // Watch tasks
 gulp.task('js-watch', function() {
-  gulp.watch(paths.js, ['lint']);
+  gulp.watch(paths.js, ['lint', 'js']);
 });
 
 gulp.task('sass-watch', function() {

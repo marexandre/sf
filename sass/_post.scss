@@ -47,6 +47,7 @@
 
 .list-post {
   margin-bottom: 0;
+  transition: height .2s linear;
 }
 
 .post {
@@ -163,6 +164,12 @@
     margin-bottom: 20px;
   }
 
+  .spinner {
+    position: relative;
+    top: 25%;
+    margin-top: 0;
+  }
+
   .comment-wrap {
     display: table;
     width: 100%;
@@ -170,6 +177,7 @@
     > * {
       display: table-cell;
       vertical-align: middle;
+      position: relative;
     }
   }
 

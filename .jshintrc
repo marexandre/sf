@@ -49,6 +49,7 @@
   // "strict": true,
 
   "globals": {
+    "confirm": true,
     "define": true,
     "settings": true,
     "appRoot": true,
