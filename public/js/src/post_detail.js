@@ -1,5 +1,16 @@
 $(function() {
   var $postDetail = $('.post-detail');
+  var messagesCount = $postDetail.find('.messages .count');
+
+  function addCommentCount() {
+    var c = parseInt(messagesCount.text(), 10);
+    messagesCount.html(c + 1);
+  }
+  function removeCommentCount() {
+    var c = parseInt(messagesCount.text(), 10);
+    messagesCount.html(c - 1);
+  }
+
 
   /**
    * On delete comment button click
@@ -10,6 +21,7 @@ $(function() {
     var r = confirm('Are you sure you want to delete this comment?');
     if (r === true) {
       $(this).closest('.post').remove();
+      removeCommentCount();
     }
   });
 
@@ -51,6 +63,7 @@ $(function() {
       .done(function(res) {
         $commentTextarea.val('').trigger('keyup');
         $('.list-post').append(Handlebars.templates.post(res));
+        addCommentCount();
       })
       .fail(function() {
         // TODO: log some error or update UI
