@@ -1,7 +1,7 @@
 .btn-strava,
 .btn-default,
 .btn-create-post {
-  transition: background 0.1s linear;
+  transition: background .1s linear;
 }
 
 .btn-default:hover {
@@ -49,7 +49,7 @@
   &:hover {
     cursor: pointer;
 
-    .icon-kudo {
+    .icon-dark {
       opacity: 1;
     }
   }
@@ -60,10 +60,15 @@
     vertical-align: middle;
   }
 
-  .icon-kudo {
+  .icon-dark,
+  .icon-orange {
     position: relative;
     top: -2px;
     margin-right: 2px;
+  }
+
+  .icon-dark {
     opacity: .5;
+    transition: opacity .1s linear;
   }
 }
