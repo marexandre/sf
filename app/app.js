@@ -53,9 +53,15 @@ exports.category = function(req, res) {
       title = 'The Rut Climbing Challenge';
       imax = 3;
       break;
+    default:
+      title = 'Forum Rules';
+      imax = 10;
+      forumID = 1;
+      break;
   }
 
   req.session.post_title = title;
+  req.session.forum_id = forumID;
 
   var tmpList = [];
   for (var i = 0; i < imax; i++) {
@@ -84,12 +90,17 @@ exports.post = function(req, res) {
   }
 
   var title = 'Category Name';
+  var forum_id = 1;
   if (req.session.post_title) {
     title = req.session.post_title;
+  }
+  if (req.session.forum_id) {
+    forum_id = req.session.forum_id;
   }
 
   res.render('post', {
     title: title,
+    forum_id: forum_id,
     post: post
   });
 };
@@ -97,8 +108,19 @@ exports.post = function(req, res) {
 
 // GET /create
 exports.create = function(req, res) {
+  var title = 'Category Name';
+  var forum_id = 1;
+  if (req.session.post_title) {
+    title = req.session.post_title;
+    forum_id = req.session.forum_id;
+  }
+  if (req.session.forum_id) {
+    forum_id = req.session.forum_id;
+  }
+
   res.render('post_create', {
-    title: 'Category Name'
+    title: title,
+    forum_id: forum_id
   });
 
 };
