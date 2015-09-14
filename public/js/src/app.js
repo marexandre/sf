@@ -17,6 +17,9 @@ $(function() {
    */
   $('.forum').on('click', '.btn-kudo', function(e) {
     e.preventDefault();
+
+    // TODO: make an ajax call to api
+
     var $this = $(this);
     var $kudos = $this.find('.icon-kudo');
     var $count = $this.find('.count');

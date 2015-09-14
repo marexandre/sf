@@ -1,5 +1,7 @@
 'use strict';
 
+var escape = require('escape-html');
+
 // GET /
 exports.ping = function(req, res) {
   res.json({data: 'pong'});
@@ -31,7 +33,7 @@ exports.postMesssage = function(req, res) {
   console.log(req.body);
 
   messsage.date = new Date();
-  messsage.body = req.body.body;
+  messsage.body = escape(req.body.body);
 
   res.json(messsage);
 };

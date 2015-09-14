@@ -1,5 +1,7 @@
 'use strict';
 
+var escape = require('escape-html');
+
 var forumActiveList = require(appRoot + '/data/forum_active.json');
 var postList = require(appRoot + '/data/post_list.json');
 
@@ -60,7 +62,7 @@ exports.category = function(req, res) {
       break;
   }
 
-  req.session.post_title = title;
+  req.session.forum_title = title;
   req.session.forum_id = forumID;
 
   var tmpList = [];
@@ -89,13 +91,24 @@ exports.post = function(req, res) {
       post = require(appRoot + '/data/post_1.json');
   }
 
-  var title = 'Category Name';
+  var title = 'Forum Rules';
   var forum_id = 1;
-  if (req.session.post_title) {
-    title = req.session.post_title;
+  if (req.session.forum_title) {
+    title = req.session.forum_title;
   }
   if (req.session.forum_id) {
     forum_id = req.session.forum_id;
+  }
+
+  if (req.session.post_body) {
+    post = require(appRoot + '/data/post_3.json');
+    post.title = req.session.post_title;
+    post.kudos = 0;
+    post.comments[0].date = new Date();
+    post.comments[0].body = req.session.post_body;
+    post.comments[0].kudos = 0;
+    post.comments[0].user = require(appRoot + '/data/post_1.json').comments[0].user;
+    req.session.post_body = null;
   }
 
   res.render('post', {
@@ -107,11 +120,11 @@ exports.post = function(req, res) {
 
 
 // GET /create
-exports.create = function(req, res) {
-  var title = 'Category Name';
+exports.getCreate = function(req, res) {
+  var title = 'Forum Rules';
   var forum_id = 1;
-  if (req.session.post_title) {
-    title = req.session.post_title;
+  if (req.session.forum_title) {
+    title = req.session.forum_title;
   }
   if (req.session.forum_id) {
     forum_id = req.session.forum_id;
@@ -123,3 +136,11 @@ exports.create = function(req, res) {
   });
 };
 
+// POST /create
+exports.postCreate = function(req, res) {
+  req.session.forum_title = req.body.forumType +' '+ req.body.categoryType;
+  req.session.post_title = req.body.title;
+  req.session.post_body = escape(req.body.postBody);
+
+  res.redirect('/post/'+ 100);
+};

@@ -5296,6 +5296,9 @@ $(function() {
    */
   $('.forum').on('click', '.btn-kudo', function(e) {
     e.preventDefault();
+
+    // TODO: make an ajax call to api
+
     var $this = $(this);
     var $kudos = $this.find('.icon-kudo');
     var $count = $this.find('.count');
@@ -5320,7 +5323,7 @@ $(function() {
 
 });
 
-}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_6f2a4e30.js","/")
+}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_f8c0d4c9.js","/")
 },{"+7ZJp0":4,"../../../shared/js/helpers.js":12,"./file_upload.js":8,"./form.js":9,"./forum.js":10,"./post_detail.js":11,"buffer":1}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {

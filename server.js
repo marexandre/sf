@@ -50,7 +50,8 @@ var app = express()
   .get('/', middleware.exposeTemplates(app, hbs), APP.index)
   .get('/category/:forum_id', middleware.exposeTemplates(app, hbs), APP.category)
   .get('/post/:post_id', middleware.exposeTemplates(app, hbs), APP.post)
-  .get('/create', middleware.exposeTemplates(app, hbs), APP.create);
+  .get('/create', middleware.exposeTemplates(app, hbs), APP.getCreate)
+  .post('/create', middleware.exposeTemplates(app, hbs), APP.postCreate);
 
 
 var port = process.env.PORT || 8999;

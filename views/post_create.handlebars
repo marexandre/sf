@@ -7,13 +7,14 @@
     <h2 class="col-md-12">Create Post</h2>
 
     {{!-- method should be POST, but as this is an prototype we use it as an redirect --}}
-    <form action="/post/1" method="get" enctype="multipart/form-data">
+    {{!-- enctype would 'multipart/form-data' in actual code but for demo we send as json --}}
+    <form action="/create" method="post" enctype="application/json">
       <div class="col-md-8 select-post-type">
         <div class="form-group">
           <label for="post-forum-select">Forum</label>
           <select id="post-forum-select" name="forumType">
-            <option value="cycling" selected="selected">Cycling</option>
-            <option value="running">Running</option>
+            <option value="Cycling" selected="selected">Cycling</option>
+            <option value="Running">Running</option>
             <option value="Challenge">Challenge</option>
           </select>
         </div>
@@ -21,8 +22,8 @@
         <div class="form-group">
           <label for="post-category-select">Category</label>
           <select id="post-category-select" name="categoryType">
-            <option value="cycling" selected="selected">Racing</option>
-            <option value="running">Gear</option>
+            <option value="Racing" selected="selected">Racing</option>
+            <option value="Gear">Gear</option>
           </select>
         </div>
       </div>
