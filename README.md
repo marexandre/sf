@@ -6,7 +6,7 @@ Challenge to design and prototype a forum :pray:
 https://fierce-sands-9435.herokuapp.com/
 
 Before testing the prototype:
-- ** Header and Footer were added so the forum feels more like a Strava site, they don't function fully as the originals on [Strava.com](https://www.strava.com/dashboard)**
+- **Header and Footer were added so the forum feels more like a Strava site, they don't function fully as the originals on [Strava.com](https://www.strava.com/dashboard)**
 
 - **Please use [Chrome device mode](https://developers.google.com/web/tools/setup/device-testing/devtools-emulator?hl=en) to test the prototype on mobile**
 
