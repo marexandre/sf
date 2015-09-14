@@ -158,6 +158,14 @@ h4 {
   }
 }
 
+.btn {
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
 .btn-strava,
 .btn-default,
 .btn-create-post {
@@ -736,7 +744,6 @@ footer .newsletter .email {
   text-align: center;
   font-size: 12px;
   color: #A9A9A9;
-  cursor: pointer;
 }
 
 .thread .update .avatar img {
