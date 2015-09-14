@@ -42,4 +42,12 @@ $(function() {
     $count.html(parseInt($count.text(), 10) + d);
   });
 
+  /**
+   * Browser back on cancel button in create new post page
+   */
+  $('.post-create').find('.btn-cancel').on('click', function(e) {
+    e.preventDefault();
+    window.history.back();
+  });
+
 });
