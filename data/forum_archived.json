@@ -1,0 +1,100 @@
+[
+  {
+    "label": "Prove It - Ride",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 560,
+    "posts": 301,
+    "messages": 1230,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  },
+  {
+    "label": "Gran Fondo 1",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 60,
+    "posts": 23,
+    "messages": 45,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  },
+  {
+    "label": "Rapha Festive 500",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 2300,
+    "posts": 120,
+    "messages": 5320,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  },
+  {
+    "label": "Strava Climbing Challenge",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 4,
+    "posts": 3,
+    "messages": 12,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  },
+  {
+    "label": "A Classic Challenge from Specialized",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 10,
+    "posts": 15,
+    "messages": 30,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  },
+  {
+    "label": "The Ultra-Trail du Mont-Blanc Distance Challenge",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 10,
+    "posts": 13,
+    "messages": 6,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  },
+  {
+    "label": "Strava Races Half Marathon",
+    "category": "challenge",
+    "forum_id": 9,
+    "athletes": 40,
+    "posts": 31,
+    "messages": 12,
+    "update": {
+      "user_id": 1,
+      "user_name": "Alex K",
+      "user_image": "https:\/\/dgalywyr863hv.cloudfront.net\/pictures\/athletes\/7417\/4259\/2\/medium.jpg",
+      "last_updated": "2015-06-11T20:27:53.196Z"
+    }
+  }
+]

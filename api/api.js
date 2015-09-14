@@ -9,6 +9,7 @@ exports.ping = function(req, res) {
 
 // GET /getForum/:forum_type
 var forumActiveList = require(appRoot + '/data/forum_active.json');
+var forumArchivedList = require(appRoot + '/data/forum_archived.json');
 exports.getForum = function(req, res) {
   var type = req.params.forum_type;
   var data = [];
@@ -18,7 +19,10 @@ exports.getForum = function(req, res) {
       data = forumActiveList;
       break;
     // case 'kudos':
-    // case 'archived':
+    //   break;
+    case 'archived':
+      data = forumArchivedList;
+      break;
     default:
       data = [];
   }

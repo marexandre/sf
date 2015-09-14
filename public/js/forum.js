@@ -5331,7 +5331,7 @@ $(function() {
 
 });
 
-}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_4826a449.js","/")
+}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_d9b511ab.js","/")
 },{"+7ZJp0":4,"../../../shared/js/helpers.js":12,"./file_upload.js":8,"./form.js":9,"./forum.js":10,"./post_detail.js":11,"buffer":1}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {
@@ -5423,7 +5423,7 @@ $(function() {
   var $ajaxRequest = null;
   var $forumLoader = $('#ajax-loader');
   $('.forum .nav-tabs li').on('click', function(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     if ($ajaxRequest) {
       $ajaxRequest.abort();
@@ -5448,6 +5448,13 @@ $(function() {
         $ajaxRequest = null;
       });
   });
+
+
+  var urlHash = window.location.hash.substr(1);
+  var $topTabBtn = $('#'+ urlHash +'-btn');
+  if ($topTabBtn.length === 1) {
+    $topTabBtn.parent().click();
+  }
 
 });
 

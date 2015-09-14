@@ -6,7 +6,7 @@ $(function() {
   var $ajaxRequest = null;
   var $forumLoader = $('#ajax-loader');
   $('.forum .nav-tabs li').on('click', function(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     if ($ajaxRequest) {
       $ajaxRequest.abort();
@@ -31,5 +31,12 @@ $(function() {
         $ajaxRequest = null;
       });
   });
+
+
+  var urlHash = window.location.hash.substr(1);
+  var $topTabBtn = $('#'+ urlHash +'-btn');
+  if ($topTabBtn.length === 1) {
+    $topTabBtn.parent().click();
+  }
 
 });
