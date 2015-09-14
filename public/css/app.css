@@ -1085,14 +1085,40 @@ footer .newsletter .email {
   padding: 0;
 }
 
-.attachments img {
+.attachments .attachment {
+  display: inline-block;
+  position: relative;
   margin-left: 2%;
   margin-bottom: 8px;
-  width: 23%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: top;
+  width: 22.5%;
+}
+
+.attachments .attachment:hover .delete {
+  display: block;
+}
+
+.attachments .delete {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: -4px;
+}
+
+.attachments .btn-delete {
+  display: block;
+  cursor: pointer;
+  width: 21px;
+  height: 20px;
+  background-position: -24px -25px;
+}
+
+.attachments img {
+  width: 100%;
   height: auto;
   border-radius: 3px;
-  border: 1px solid #ccc;
-  vertical-align: top;
 }
 
 body {

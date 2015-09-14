@@ -112,7 +112,6 @@ exports.create = function(req, res) {
   var forum_id = 1;
   if (req.session.post_title) {
     title = req.session.post_title;
-    forum_id = req.session.forum_id;
   }
   if (req.session.forum_id) {
     forum_id = req.session.forum_id;
@@ -122,6 +121,5 @@ exports.create = function(req, res) {
     title: title,
     forum_id: forum_id
   });
-
 };
 

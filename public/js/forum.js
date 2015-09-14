@@ -5320,7 +5320,7 @@ $(function() {
 
 });
 
-}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_e951dd78.js","/")
+}).call(this,require("+7ZJp0"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_6f2a4e30.js","/")
 },{"+7ZJp0":4,"../../../shared/js/helpers.js":12,"./file_upload.js":8,"./form.js":9,"./forum.js":10,"./post_detail.js":11,"buffer":1}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 $(function() {
@@ -5337,23 +5337,26 @@ $(function() {
     $('#fileUpload').click();
   });
 
+
+  function _onLoad(e) {
+    $attachments.append(
+      Handlebars.templates.attachment({
+        src: e.target.result
+      })
+    );
+  }
+
   $('#fileUpload').on('change', function() {
 
     if (typeof (FileReader) === 'undefined') {
       console.log('This browser does not support FileReader.');
     }
 
-    var _onLoad = function(e) {
-      var img = document.createElement('img');
-      img.setAttribute('src', e.target.result);
-      img.setAttribute('alt', 'Attachment preview');
-      $attachments.append(img);
-    };
-
     var $this = $(this);
     var imax = $(this)[0].files.length;
     for (var i = 0; i < imax; i++) {
       var file = $this[0].files[i];
+
       if (!fileTypeRegex.test(file.name.toLowerCase())) {
         alert(file.name +' is not image file. Please select only images.');
         return false;
@@ -5364,6 +5367,15 @@ $(function() {
       reader.readAsDataURL(file);
     }
     $attachments.show();
+  });
+
+  /**
+   * Delete attachment form the screen.
+   */
+  $attachments.on('click', '.btn-delete', function(e) {
+    e.preventDefault();
+    console.log('delete image');
+    $(this).closest('.attachment').remove();
   });
 
 });
