@@ -1,4 +1,4 @@
-# Forum
+# Forum Prototype
 Challenge to design and prototype a forum :pray:
 
 

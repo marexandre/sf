@@ -1,4 +1,4 @@
-# Forum
+# Forum Prototype Design
 Main focus for design was to maintain the look/design with the exciting Strava website, when a user is logged in, and not to do redesign or add too much new look/design so it naturally fits into the existing website.
 
 
