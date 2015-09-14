@@ -4,9 +4,20 @@ var escape = require('escape-html');
 
 var forumActiveList = require(appRoot + '/data/forum_active.json');
 var postList = require(appRoot + '/data/post_list.json');
+var tmpPostData = require(appRoot + '/data/post_3.json');
+var tmpUserData = require(appRoot + '/data/post_1.json').comments[0].user;
+
+function clearPostSession(req) {
+  req.session.forum_id = null;
+  req.session.forum_title = null;
+  req.session.post_body = null;
+  req.session.post_title = null;
+}
 
 // GET /
 exports.index = function(req, res) {
+  clearPostSession(req);
+
   res.render('index', {
     data: forumActiveList
   });
@@ -14,6 +25,8 @@ exports.index = function(req, res) {
 
 // GET /category/:forum_id
 exports.category = function(req, res) {
+  clearPostSession(req);
+
   var forumID = parseInt(req.params.forum_id, 10);
   var title = '';
   var imax = 6;
@@ -101,14 +114,13 @@ exports.post = function(req, res) {
   }
 
   if (req.session.post_body) {
-    post = require(appRoot + '/data/post_3.json');
+    post = JSON.parse(JSON.stringify(tmpPostData));
     post.title = req.session.post_title;
     post.kudos = 0;
     post.comments[0].date = new Date();
     post.comments[0].body = req.session.post_body;
     post.comments[0].kudos = 0;
-    post.comments[0].user = require(appRoot + '/data/post_1.json').comments[0].user;
-    req.session.post_body = null;
+    post.comments[0].user = tmpUserData;
   }
 
   res.render('post', {
